@@ -1,0 +1,13 @@
+.addBtn {
+  padding: 5px 15px;
+  width: 130px;
+
+  background-color: rgb(126, 50, 150);
+  color: aliceblue;
+
+  transition: background-color 250ms ease, transform 250ms ease;
+}
+.addBtn:hover {
+  background-color: rgb(162, 63, 192);
+  transform: scale(1.1);
+}

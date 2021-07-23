@@ -1,0 +1,37 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.text {
+  margin: 0;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact:not(:last-child) {
+  margin-bottom: 10px;
+}
+.name {
+  font-weight: bold;
+}
+.phone {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.61);
+}
+.removeBtn {
+  padding: 5px 15px;
+  width: 160px;
+  margin-left: 10px;
+
+  background-color: rgb(126, 50, 150);
+  color: aliceblue;
+
+  transition: background-color 250ms ease, transform 250ms ease;
+}
+.removeBtn:hover {
+  background-color: rgb(162, 63, 192);
+  transform: scale(1.1);
+}
