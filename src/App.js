@@ -1,22 +1,15 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import Section from './components/Section';
 import Form from './components/Form';
 import Contacts from './components/Contacts';
+import useLocalStorage from './hooks/useLocalStorage';
 
 const App = () => {
-  const contactsList = window.localStorage.getItem('contactsList')
-    ? JSON.parse(window.localStorage.getItem('contactsList'))
-    : [];
-  const [contacts, setContacts] = useState(contactsList);
+  const [contacts, setContacts] = useLocalStorage('contacts', []);
   const [filter, setFilter] = useState('');
-
-  useEffect(() => {
-    window.localStorage.setItem('contactsList', JSON.stringify(contacts));
-    console.log('writing new contact into loc stor');
-  }, [contacts]);
 
   const handleFilter = event => {
     setFilter(event.currentTarget.value);
